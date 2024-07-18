@@ -82,8 +82,8 @@ ExclusiveArch:    %{java_arches} noarch
 BuildRequires:    %{java_devel}
 BuildRequires:    maven-local
 BuildRequires:    ant >= 1.6.2
-BuildRequires:    mvn(org.dogtagpki.jss:jss-base) >= 5.5.0
-BuildRequires:    mvn(org.dogtagpki.ldap-sdk:ldapjdk) >= 5.5.0
+BuildRequires:    mvn(org.dogtagpki.jss:jss-base) >= 5.5.0, mvn(org.dogtagpki.jss:jss-base) < 5.6.0
+BuildRequires:    mvn(org.dogtagpki.ldap-sdk:ldapjdk) >= 5.5.0, mvn(org.dogtagpki.ldap-sdk:ldapjdk) < 5.6.0
 
 %description
 A Java Management Console framework used for remote server management.
@@ -95,8 +95,8 @@ A Java Management Console framework used for remote server management.
 Summary:          Identity Management Console Framework
 
 Requires:         %{java_headless}
-Requires:         mvn(org.dogtagpki.jss:jss-base) >= 5.5.0
-Requires:         mvn(org.dogtagpki.ldap-sdk:ldapjdk) >= 5.5.0
+Requires:         mvn(org.dogtagpki.jss:jss-base) >= 5.5.0, mvn(org.dogtagpki.jss:jss-base) < 5.6.0
+Requires:         mvn(org.dogtagpki.ldap-sdk:ldapjdk) >= 5.5.0, mvn(org.dogtagpki.ldap-sdk:ldapjdk) < 5.6.0
 
 %if "%{product_id}" != "idm-console-framework"
 Obsoletes:        idm-console-framework < %{version}-%{release}
