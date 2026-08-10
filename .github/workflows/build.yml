@@ -27,7 +27,7 @@ jobs:
           path: /tmp/.buildx-cache
 
       - name: Build idm-console-framework-deps image
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -39,7 +39,7 @@ jobs:
         if: steps.cache-buildx.outputs.cache-hit != 'true'
 
       - name: Build idm-console-framework-builder-deps image
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -51,7 +51,7 @@ jobs:
         if: steps.cache-buildx.outputs.cache-hit != 'true'
 
       - name: Build idm-console-framework-builder image
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -69,7 +69,7 @@ jobs:
           path: idm-console-framework-builder.tar
 
       - name: Build idm-console-framework-dist image
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -87,7 +87,7 @@ jobs:
           path: idm-console-framework-dist.tar
 
       - name: Build idm-console-framework-runner image
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
