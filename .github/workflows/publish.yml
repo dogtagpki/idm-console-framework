@@ -50,7 +50,7 @@ jobs:
         if: vars.REGISTRY != 'ghcr.io'
 
       - name: Retrieve idm-console-framework-dist image
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: idm-console-framework-dist-${{ github.sha }}
           path: idm-console-framework-dist.tar

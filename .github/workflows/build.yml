@@ -21,7 +21,7 @@ jobs:
 
       - name: Cache Docker layers
         id: cache-buildx
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: buildx-${{ hashFiles('idm-console-framework.spec') }}
           path: /tmp/.buildx-cache
@@ -63,7 +63,7 @@ jobs:
           outputs: type=docker,dest=idm-console-framework-builder.tar
 
       - name: Store idm-console-framework-builder image
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: idm-console-framework-builder-${{ github.sha }}
           path: idm-console-framework-builder.tar
@@ -81,7 +81,7 @@ jobs:
           outputs: type=docker,dest=idm-console-framework-dist.tar
 
       - name: Store idm-console-framework-dist image
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: idm-console-framework-dist-${{ github.sha }}
           path: idm-console-framework-dist.tar
@@ -99,7 +99,7 @@ jobs:
           outputs: type=docker,dest=idm-console-framework-runner.tar
 
       - name: Store idm-console-framework-runner image
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: idm-console-framework-runner-${{ github.sha }}
           path: idm-console-framework-runner.tar
